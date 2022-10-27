@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#33b5e5">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/compiled-4.20.0.min.css">
+
+    <meta charset="utf-8">
+   
+
+   
+    <meta itemprop="name"
+        content="Bootstrap 4 Components - visual guide to components of Bootstrap 4 - Material Design for Bootstrap">
+    <meta itemprop="description"
+        content="Learn how to use Bootstrap Components at basic and advanced level. Read our visual guide and comprehensive tutorial about the newest Bootstrap 4.">
+
+
+    <link rel="shortcut icon" href="img/FB_IMG_15999141529387218.jpg" />
+
+    <link rel="canonical" href="https://mdbootstrap.com/docs/b4/jquery/components/demo/" />
+
+
+    <script data-cfasync="false">
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.' + 'js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7MBMN');
+    </script>
+
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "MDBootstrap",
+        "item": "https://mdbootstrap.com/",
+        "image": "https://mdbcdn.b-cdn.net/img/Marketing/mdb-press-pack/mdb-main.webp"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Standard",
+        "item": "https://mdbootstrap.com/docs/standard/",
+        "image": "https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/content/en/_mdb5/standard/about/assets/mdb5-about.webp"
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Bootstrap 4 Components - visual guide to components of Bootstrap 4 - Material Design for Bootstrap",
+        "item": "https://mdbootstrap.com/docs/b4/jquery/components/demo/",
+        "image": "https://mdbcdn.b-cdn.net/wp-content/uploads/2016/11/mdb-pro-min-1.jpg"
+      }]
+    }
+  </script>
+  <style>
+
+    html,
+    body,
+    header,
+    .view {
+      height: 90%;
+    }
+  
+    @media (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 400px;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 500px;
+      }
+    }
+  
+    .btn .fa {
+      margin-left: 3px;
+    }
+  
+    .top-nav-collapse {
+       background: -moz-linear-gradient(45deg, rgba(4, 2, 17, 0.7), rgba(160, 7, 127, 0.7) 100%);
+      background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(158, 12, 134, 0.7) 100%);
+      background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+      background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(187, 15, 178, 0.7) 100%);
+      background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(145, 9, 150, 0.7) 100%);
+
+    }
+  
+    .navbar:not(.top-nav-collapse) {
+      background: transparent !important;
+    }
+  
+    @media (max-width: 991px) {
+     .navbar:not(.top-nav-collapse) {
+      background: #424f95 !important;
+     }
+    }
+  
+    .btn-white {
+      color: black !important;
+    }
+  
+   
+  
+    .rgba-gradient {
+        background: -moz-linear-gradient(45deg, rgba(4, 2, 17, 0.7), rgba(29, 210, 177, 0.7) 100%);
+      background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+      background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+      background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+      background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    }
+
+    .rgba-gradient1 {
+      background: -moz-linear-gradient(45deg, rgba(4, 2, 17, 0.7), rgba(29, 210, 177, 0.7) 60%);
+      background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 40%);
+      background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.5)));
+      background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.2), rgba(29, 210, 177, 0.7) 50%);
+      background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 20%);
+    }
+  
+    .rgba-gradient2 {
+      background: -moz-linear-gradient(45deg, rgba(63, 1, 71, 0.1), rgba(29, 210, 177, 0.3) 60%);
+      background: -webkit-linear-gradient(45deg, rgba(230, 11, 200, 0.1), rgba(29, 210, 177, 0.3) 40%);
+      background: -webkit-gradient(linear, 45deg, from(rgba(212, 19, 203, 0.1)), to(rgba(29, 210, 177, 0.3)));
+      background: -o-linear-gradient(45deg, rgba(209, 10, 166, 0.1), rgba(189, 29, 210, 0.2) 50%);
+      background: linear-gradient(to 45deg, rgba(78, 4, 107, 0.2), rgba(180, 16, 158, 0.2) 20%);
+    }
+    
+  </style>
+
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <strong>coded_pearls</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+            aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#panel3">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#panel1">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#panel2">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#panel4">Contact</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+      <!-- Full Page Intro -->
+      <div class="view" style="background-image: url('img/IMG-20210514-WA0020.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+          <!-- Content -->
+          <div class="container">
+            <br>
+            <br>
+            <br>
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 " >
+                <h1 class="h1-responsive font-weight-bold mt-sm-5 text-left animated tada slower">Hola-I'm Jennypearls</h1>
+                <hr class="hr-light">
+                <h6 class="mb-4"> Are you looking for a Solution-driven web developer and a graphic designer who can  adapt at contributing to highly collaborative work environment and finding solutions with a Proven experience developing consumer-focused softwares? </h6>
+               <a class="btn btn-outline-white btn-rounded">Download CV</a>
+             <a class="btn btn-outline-white btn-rounded">Hire Me</a>
+            </div>
+              </div>
+            
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+      </div>
+      <!-- Full Page Intro -->
+    </header>
+    <!-- Main navigation -->
+</head>
+
+<body>
+  <br>
+    <div class="container my-5">
+        <!--Section: Content-->
+            <div class="container" id="panel3">
+                <!--Section: Content-->
+                <section class="dark-grey-text">
+              
+                  <div class="row pr-lg-5">
+                    <div class="col-md-5 mb-4">
+              
+                      <div class="view">
+                        <img src="img/IMG-20210514-WA0020.jpg" class="img-fluid" alt="smaple image" height="150px" width="350px">
+                      </div>
+              
+                    </div>
+                    <div class="col-md-7 d-flex align-items-center">
+                      <div>
+                        
+                        <h6 class="font-weight-bold mb-4 text-center">Hi there.....I'm Jenny</h6>
+              
+                          <p class="text-center"> I believe  focusing on your company web presence is essential to growing your company With over 4 years of experience in software development and graphic designing, my knowledge and skills can help you create an effective web presence to boost your business. My dedication to creating comprehensive and stunning softwares can also help your company improve its business integrity and increase customer retention.</p>
+                      </div>
+                    </div>
+                  </div>
+              
+                </section>
+                <!--Section: Content-->
+              
+              
+              </div>
+
+            <!--Section: Tabs and Pills-->
+       <hr>
+
+<br>
+<br>
+<!--Section: Tabs and Pills-->
+
+         
+        </section>
+    </div>
+
+   
+ <div class="container my-5">
+  <div class="row">
+          <!--Second column-->
+    <div class="col-md-4 mb-4">
+
+      <!-- Card -->
+      <a href="#!" class="card hoverable view overlay zoom z-depth-5 ">
+
+          <!-- Card content -->
+          <div class="card-body">
+
+              <div class="media">
+                  <div class="media-body">
+                      <br>
+                      <center><i class="fas fa-code fa-2x mb-4" aria-hidden="true"  style="color: black;"></i></center>
+                      <h6 class="dark-grey-text mb-3 text-center font-weight-bold">DEVELOPER</h6>
+                      <hr>
+                      <p class="dark-grey-text  text-center">Determined coding requirements for site creation,including e-commerce capability.security and specialized scripts</p>
+                      <br>
+                  </div>
+              </div>
+
+          </div>
+
+      </a>
+      <!-- Card -->
+      <!-- Card -->
+
+  </div>
+  <!--Second column-->
+  <!--Second column-->
+  <div class="col-md-4 mb-4">
+
+    <!-- Card -->
+    <a href="#!" class="card hoverable  z-depth-5 rgba-gradient1">
+
+        <!-- Card content -->
+        <div class="card-body hoverable">
+
+            <div class="media">
+                <div class="media-body ">
+                    <br>
+                  <center> <i class="fas fa-pencil-alt fa-2x mb-4" aria-hidden="true" style="color: white;"></i> </center>
+                  <h6 class="text-white mb-3 text-center font-weight-bold">DESIGNER</h6>
+                  <hr>
+                  <p class="text-white text-center">Employed coding practices based on commonly accepted standards to establish site layout and user interface </p>
+                    <br>
+                </div>
+            </div>
+
+        </div>
+
+    </a>
+    <!-- Card -->
+    <!-- Card -->
+
+</div>
+<!--Second column-->
+<!--First row-->
+
+
+    <!--First column-->
+    <div class="col-md-4 mb-4">
+
+        <!-- Card -->
+        <a href="#!" class="card hoverable  z-depth-5 ">
+
+            <!-- Card content -->
+            <div class="card-body hoverable">
+
+                <div class="media">
+                    <div class="media-body">
+                        <br>
+                       <center> <i class="fas fa-laptop fa-2x mb-4" aria-hidden="true"  style="color: black;"></i></center>
+                       <h6 class="dark-grey-text  text-center font-weight-bold">FREELANCER</h6>
+                       <hr>
+                       <p class="dark-grey-text text-center">I generally make direct contact with clients to discuss hiring terms and service rates.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </a>
+        <!-- Card -->
+
+    </div>
+    <!--First column-->
+
+</div>
+<!--First row-->
+
+       </div>
+  
+ <div class="container">
+    <section id="tabs" class="text-center">
+        <h5 class="font-weight-bold mb-4 text-center">PROCESS OF CREATING</h5>
+        <div class="row">
+            <div class="col-12 my-3">
+    
+              <!-- Classic tabs -->
+              <div class="classic-tabs">
+    
+                <!-- Nav tabs -->
+    
+                <div class="tabs-wrapper">
+                    <ul class="nav rgba-gradient1" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link waves-light active" data-toggle="tab" href="#panel36" role="tab"><b>01.Research</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-light" data-toggle="tab" href="#panel37" role="tab"><b>02.Design</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-light" data-toggle="tab" href="#panel38" role="tab"><b>03.Development</b></a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <!-- Tab panels -->
+                <div class="tab-content card">
+                    <!--Panel 1-->
+                    <div class="tab-pane fade in show active" id="panel36" role="tabpanel">
+                        <small><P>THIS IS THE SYSTEMATIC INVESTIGATION AND STUDY OF MATERIALS AND SOURCES NEEDED TO GIVE YOU A MODERNIZED SOFTWARES TO APPEAL EXPANDING CUSTOMER POPULATION.YOU GO THROUGH A STEP TO STEP CONVERSATION TO HELP UNDERSTAND YOUR BUSINESS EVEN BETTER SO AS TO CREATE SOFTWARES THAT SUITS YOUR BUSINESS. .</p></small>
+                          <button type="button" class="btn rgba-gradient1 mx-0" ><a href="#panel4">Lets Talk</a></button>
+                    </div>
+                    <!--/.Panel 1-->
+                    <!--Panel 2-->
+                    <div class="tab-pane fade" id="panel37" role="tabpanel">
+                       <SMALL> <p>THIS DEALS WITH COMING UP WITH INNOVATIVE AND CAPTIVATING DESIGNS TO SATISFY CUSTOMERS AND INFLUENCE CUSTOER'S USER EXPERIENCE(UX).I ENJOY THE CHALLENGE OF FINDING UNIQUES WAYS TO FUFIL MY CUSTOMER'S NEED </div></SMALL>
+                         <!--Panel 3-->
+                     <div class="tab-pane fade" id="panel38" role="tabpanel">
+                      <SMALL> <p>THIS IS WHERE ALL THE MAGIC HAPPENS...THIS WHERE CLIENTS IMAGINATIONS TO REALITY(AFTER CONSTRUCTIVE RESEARCH AND PLANNING) BY WRITING CODES AND INCORPORATING FRAMEWORKS TO COME UP AWESOME SOFTWARES FOR CLIENTS </P></SMALL>
+                   </div>
+                   <!--/.Panel 3-->
+                    </div>
+                    <!--/.Panel 2-->
+
+                    
+                  </div>
+                </div>
+                </div>
+              
+              </div>
+              <!-- Classic tabs -->
+    
+            </div>
+        </div>
+    </section>
+ </div>
+    <div class="container my-5 pt-5 pb-3 px-4 z-depth-5 "id="panel2">
+
+
+        <!--Section: Block Content-->
+        <section>
+    
+          <!--Grid row-->
+          <div class="row">
+    
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+    
+              <h5 class="text-center font-weight-bold mb-4">Skills</h5>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">uI/UX focused designs</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 85%" aria-valuenow="25"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Bootstrap</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Html/Css</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 95%" aria-valuenow="75"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">javascript</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 80%" aria-valuenow="100"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Wordpress</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 75%" aria-valuenow="100"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Project Management</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 85%" aria-valuenow="100"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Communication</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient2" role="progressbar" style="width: 95%" aria-valuenow="100"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+    
+              <h5 class="text-center font-weight-bold mb-4"> Professional Skills</h5>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted text-center">Coding:</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient1" role="progressbar" style="width: 95%" aria-valuenow="55"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">UI/UX Design</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient1" role="progressbar" style="width: 98%" aria-valuenow="80" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+    
+              <div class="d-flex justify-content-between">
+                <small class="text-muted">Problem Solving</small>
+              </div>
+              <div class="progress md-progress">
+                <div class="progress-bar rgba-gradient1" role="progressbar" style="width: 95%" aria-valuenow="45"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+    
+            </div>
+            <!--Grid column-->
+    
+          </div>
+          <!--Grid row-->
+    
+        </section>
+        <!--Section: Block Content-->
+    
+    
+      </div>
+      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient12.webp);">
+        <div class="text-white text-center py-5 px-4">
+          <div>
+            <h4 class="card-title h4-responsive pt-3 mb-5 font-bold animated tada slower"><strong>"FIRST SOLVE THE PROBLEM ,THEN WRITE THE CODE"</strong></h4>
+        
+          </div>
+        </div>
+      </div>
+ 
+<br>
+<br>
+<div class="container mt-5">
+
+
+    <!--Section: Content-->
+    <section class="dark-grey-text text-center" id="panel1">
+  
+        <h3 class="font-weight-bold mb-4 text-center">My Projects</h3>
+      <!-- Section heading -->
+     
+      <!--Tab panels-->
+      <div class="tab-content">
+  
+        <!--Panel 1-->
+        <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+          <br>
+          <!--First row-->
+          <div class="row">
+           
+           <!--First column-->
+           <div class="col-lg-3 col-md-12 mb-4">
+             <!--Featured image-->
+             <div class="view overlay zoom z-depth-4">
+               <button type="button" class="btn btn-purple mx-0">Creatives</button>
+               <img src="img/20220414_142426.jpg" class="img-fluid">
+             </div>
+           </div>
+           <!--First column-->
+           
+           <!--Second column-->
+           <div class="col-lg-3 col-md-6 mb-4">
+             <!--Featured image-->
+             <div class="view overlay zoom z-depth-4">
+               <button type="button" class="btn btn-purple mx-0">Creatives</button>
+               <img src="img/20220321_050114.jpg" class="img-fluid">
+             </div>
+           </div>
+           <!--Second column-->
+           
+           <!--Third column-->
+         
+           <div class="col-lg-3 col-md-6 mb-4">
+             <!--Featured image-->
+             <div class="view overlay zoom z-depth-2">
+               <button type="button" class="btn btn-purple mx-0">Creatives</button>
+               <img src="img/20220618_093119.jpg" class="img-fluid">
+             </div>
+           </div>
+          
+           <!--Third column-->
+
+            <!--Third column-->
+         
+            <div class="col-lg-3 col-md-6 mb-4">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-2">
+                <button type="button" class="btn btn-purple mx-0">Creatives</button>
+                <img src="img/20220716_075208.jpg" class="img-fluid">
+              </div>
+            </div>
+           
+            <!--Third column-->
+           
+         </div>
+         <!--First row-->
+          <br>
+          <!--First row-->
+          <div class="row">
+            
+            <!--First column-->
+            <div class="col-lg-4 col-md-12 mb-4">
+              <a href="https://threeancompany.com/">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-4">
+                <button type="button" class="btn btn-blue mx-0">Website</button>
+                <img src="img/Screenshot from 2022-10-10 12-00-22.png" class="img-fluid">
+              </div>
+              </a>
+            </div>
+            <!--First column-->
+            
+            <!--Second column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="https://xceedmac.com/">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-4">
+                <button type="button" class="btn btn-blue mx-0 ">Website</button>
+                <img src="img/Screenshot from 2022-10-10 11-49-00.png" class="img-fluid">
+              </div>
+              </a>
+            </div>
+            <!--Second column-->
+            
+            <!--Third column-->
+          
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="https://omnifood-caleb.netlify.app/">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-4">
+                <button type="button" class="btn btn-blue mx-0">Website</button>
+                <img src="img/Screenshot from 2022-10-10 11-46-44.png" class="img-fluid">
+              </div>
+            </a>
+            </div>
+           
+            <!--Third column-->
+            
+          </div>
+          <!--First row-->
+          <br>
+          <!--First row-->
+          <div class="row">
+           
+           <!--First column-->
+           <div class="col-lg-3 col-md-12 mb-4">
+             <!--Featured image-->
+             <div class="view overlay zoom z-depth-4">
+               <button type="button" class="btn btn-purple mx-0">Creatives</button>
+               <img src="img/20220131_114900.jpg" class="img-fluid">
+             </div>
+           </div>
+           <!--First column-->
+           
+           <!--Second column-->
+           <div class="col-lg-3 col-md-6 mb-4">
+             <!--Featured image-->
+             <div class="view overlay zoom z-depth-4">
+               <button type="button" class="btn btn-purple mx-0">Creatives</button>
+               <img src="img/20220208_131211.jpg" class="img-fluid">
+             </div>
+           </div>
+           <!--Second column-->
+           
+           <!--Third column-->
+         
+           <div class="col-lg-3 col-md-6 mb-4">
+             <!--Featured image-->
+             <div class="view overlay zoom z-depth-2">
+               <button type="button" class="btn btn-purple mx-0">Creatives</button>
+               <img src="img/20220405_070742.jpg" class="img-fluid">
+             </div>
+           </a>
+           </div>
+          
+           <!--Third column-->
+             <!--Third column-->
+         
+             <div class="col-lg-3 col-md-6 mb-4">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-2">
+                <button type="button" class="btn btn-purple mx-0">Creatives</button>
+                <img src="img/20220722_094138.jpg" class="img-fluid">
+              </div>
+            </a>
+            </div>
+           
+            <!--Third column-->
+           
+         </div>
+         <!--First row-->
+          <br>
+           <!--First row-->
+           <div class="row">
+            
+            <!--First column-->
+            <div class="col-lg-4 col-md-12 mb-4">
+              <a href="https://tyta.vercel.app/">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-4">
+                <button type="button" class="btn btn-blue mx-0">Website</button>
+                <img src="img/Screenshot from 2022-10-10 11-46-39.png" class="img-fluid">
+              </div>
+              </a>
+            </div>
+            <!--First column-->
+            
+            <!--Second column-->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="https://synomemes.com/">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-4">
+                <button type="button" class="btn btn-warning mx-0">Software</button>
+                <img src="img/Screenshot from 2022-10-10 12-23-27.png" class="img-fluid">
+              </div>
+              </a>
+            </div>
+            <!--Second column-->
+            
+            <!--Third column-->
+          
+            <div class="col-lg-4 col-md-6 mb-4">
+              <a href="https://silver-marshmallow-3fc52b.netlify.app/">
+              <!--Featured image-->
+              <div class="view overlay zoom z-depth-2">
+                <button type="button" class="btn btn-blue mx-0">Website</button>
+                <img src="img/Screenshot from 2022-10-10 12-27-37.png" class="img-fluid">
+              </div>
+            </a>
+            </div>
+           
+            <!--Third column-->
+            
+          </div>
+          <!--First row-->
+        <br>
+  
+        </div>
+        <!--Panel 1-->
+  
+    </section>
+    
+  </div>
+
+  <div class="container my-5">
+
+ 
+    <!--Section: Content-->
+    <section class="contact-section dark-grey-text mb-5">
+      
+      <style>
+      	.contact-section .form .btn-floating {
+          left: 3px;
+        }
+      </style>
+
+      <!-- Form with header -->
+      <div class="card" id="panel4">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-lg-8">
+
+            <div class="card-body form">
+
+              <!-- Header -->
+              <h3 class="font-weight-bold dark-grey-text mt-4"><i class="fas fa-envelope pr-2 mr-1"></i>Holla at me:</h3>
+
+              <!-- Grid row -->
+              <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="form-contact-name" class="form-control">
+                    <label for="form-contact-name" class="">Your name</label>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="form-contact-email" class="form-control">
+                    <label for="form-contact-email" class="">Your email</label>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+              <!-- Grid row -->
+              <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="form-contact-phone" class="form-control">
+                    <label for="form-contact-phone" class="">Your phone</label>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <input type="text" id="form-contact-company" class="form-control">
+                    <label for="form-contact-company" class="">Your company</label>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+              <!-- Grid row -->
+              <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <textarea id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
+                    <label for="form-contact-message">Your message</label>
+                    <a class="btn-floating btn-lg blue">
+                      <i class="far fa-paper-plane"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Grid column -->
+
+              </div>
+              <!-- Grid row -->
+
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-4">
+
+            <div class="card-body contact text-center h-100 white-text rgba-gradient2">
+
+              <h3 class="font-weight-bold my-4 pb-2">Contact information</h3>
+              <ul class="text-lg-left list-unstyled ml-4">
+                <li>
+                  <p><i class="fas fa-map-marker-alt pr-2"></i>Ghana ,Kumasi</p>
+                </li>
+                <li>
+                  <p><i class="fas fa-phone pr-2"></i>+233 5565 30107</p>
+                </li>
+                <li>
+                  <p><i class="fas fa-envelope pr-2"></i>jenniferabula8@gmail.com</p>
+                </li>
+              </ul>
+              <hr class="hr-light my-4">
+              <ul class="list-inline text-center list-unstyled">
+                <li class="list-inline-item">
+                  <a class="p-2 fa-lg li-ic" href="https://www.linkedin.com/in/jennifer-abula-74b928242/">
+                    <i class="fab fa-linkedin-in"> </i>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Form with header -->
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+
+  <br>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+<!-- Footer Elements -->
+<div class="container">
+
+  <!-- Grid row-->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-md-12 py-5">
+        <h2 class="font-weight-bold my-4 pb-2 text-center animated heartBeat infinite">Want an outstanding project?</h2>
+        <h4 class="font-weight-bold my-4 pb-2 text-center">Just send me a message!</h4>
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row-->
+
+</div>
+<!-- Footer Elements -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2022 Copyright:
+  <a href="#">Jenny_pearls</a>
+</div>
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+    <script type="text/javascript"
+        src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/bundles/4.20.0/compiled.min.js"></script>
+
+
+    <script type="text/javascript"
+        src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/search-v4/search.min.js"></script>
+    <script src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/dist/main.min.js"></script>
+
+
+
+</body>
+
+</html>
